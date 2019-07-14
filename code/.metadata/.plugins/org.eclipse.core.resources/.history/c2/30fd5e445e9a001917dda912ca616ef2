@@ -1,0 +1,46 @@
+/*
+ * main.c
+ *
+ *  Created on: Jun 21, 2019
+ *      Author: LENOVO
+ */
+
+
+#include "common_macros.h"
+#include "data_type.h"
+#include "micro_config.h"
+#include "rf.h"
+#include "lcd.h"
+
+int main ()
+{
+	DDRD|=0x80;
+	PORTD=(1<<7);
+	/*
+	 * Init.
+	 */
+	RF_init();
+	LCD_init();
+	/*
+	 * App.
+	 */
+
+	uint8 data=0;
+	//LCD_displayStringRowCol(0,0,"ahmed");
+	//LCD_displayString("ahmed");
+	while( True )
+	{
+		data=RF_receiveByte();
+		//LCD_goToRowColumn(0,0);
+
+		//RF_sendByte( data );
+		//LCD_goToRowColumn(1,0);
+      // if(data==0xFF){
+		LCD_integerToString(  data  );
+		//if(data[0]=='$'/* && data[1]==1 && data[2]==0*/){
+		//LCD_displayString(data);
+		 _delay_ms(2000);
+		//}
+		LCD_clearScreen();
+	}
+}

@@ -1,0 +1,42 @@
+20:41:04 **** Incremental Build of configuration Debug for project SMARTLCD ****
+make all 
+Building file: ../master.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"master.d" -MT"master.o" -c -o "master.o" "../master.c"
+In file included from ../MICRO_setting.h:17,
+                 from ../LCD_SMART.h:11,
+                 from ../master.c:12:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../master.c
+ 
+Building target: SMARTLCD.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,SMARTLCD.map -mmcu=atmega32 -o "SMARTLCD.elf"  ./LCD.o ./SMARTLCD.o ./master.o ./uart.o   
+Finished building target: SMARTLCD.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S SMARTLCD.elf  >"SMARTLCD.lss"
+Finished building: SMARTLCD.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex SMARTLCD.elf  "SMARTLCD.hex"
+Finished building: SMARTLCD.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 SMARTLCD.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10158 bytes (31.0% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+20:41:05 Build Finished. 0 errors, 1 warnings. (took 1s.70ms)
+

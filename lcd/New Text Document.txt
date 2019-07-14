@@ -1,0 +1,4 @@
+Rph:   Is.t:        If:
+Sph:   Is.t:        If:
+Tph:   Is.t:        If:
+ON:1/OFF:0

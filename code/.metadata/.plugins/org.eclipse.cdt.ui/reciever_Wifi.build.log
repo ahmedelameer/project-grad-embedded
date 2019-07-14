@@ -1,0 +1,45 @@
+13:24:56 **** Incremental Build of configuration Debug for project reciever_Wifi ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../micro_config.h:9,
+                 from ../main.c:11:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:28: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../main.c:38: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../main.c:45: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+Finished building: ../main.c
+ 
+Building target: reciever_Wifi.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,reciever_Wifi.map -mmcu=atmega32 -o "reciever_Wifi.elf"  ./lcd.o ./main.o ./rf.o ./uart.o   
+Finished building target: reciever_Wifi.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S reciever_Wifi.elf  >"reciever_Wifi.lss"
+Finished building: reciever_Wifi.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex reciever_Wifi.elf  "reciever_Wifi.hex"
+Finished building: reciever_Wifi.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 reciever_Wifi.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6312 bytes (19.3% Full)
+(.text + .data + .bootloader)
+
+Data:        286 bytes (14.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+13:24:58 Build Finished. 0 errors, 4 warnings. (took 1s.260ms)
+

@@ -1,0 +1,31 @@
+/*
+ * master.c
+ *
+ *  Created on: ??þ/??þ/????
+ *      Author: Mohamed ELameer
+ */
+
+
+
+
+
+#include"uart.h"
+
+
+int main(void){
+	unit8 data = 0;
+	UART_init();
+
+
+
+
+	while(1){
+		for(data=0;data<8;data++){
+			UART_sendByte(data);
+			_delay_ms(10);
+
+		}
+
+	}
+	return 0;
+}

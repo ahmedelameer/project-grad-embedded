@@ -1,0 +1,60 @@
+15:49:07 **** Incremental Build of configuration Debug for project tx_Wifi ****
+make all 
+Building file: ../lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega128 -DF_CPU=1000000UL -MMD -MP -MF"lcd.d" -MT"lcd.o" -c -o "lcd.o" "../lcd.c"
+In file included from ../micro_config.h:14,
+                 from ../lcd.h:13,
+                 from ../lcd.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../lcd.c: In function 'LCD_integerToString':
+../lcd.c:187: warning: pointer targets in passing argument 2 of 'itoa' differ in signedness
+../lcd.c: In function 'LCD_floatToString':
+../lcd.c:197: warning: pointer targets in passing argument 2 of 'ftoa' differ in signedness
+Finished building: ../lcd.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega128 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../micro_config.h:14,
+                 from ../main.c:11:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building file: ../rf.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega128 -DF_CPU=1000000UL -MMD -MP -MF"rf.d" -MT"rf.o" -c -o "rf.o" "../rf.c"
+In file included from ../micro_config.h:14,
+                 from ../uart.h:13,
+                 from ../rf.h:11,
+                 from ../rf.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../rf.c
+ 
+Building file: ../uart.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega128 -DF_CPU=1000000UL -MMD -MP -MF"uart.d" -MT"uart.o" -c -o "uart.o" "../uart.c"
+In file included from ../micro_config.h:14,
+                 from ../uart.h:13,
+                 from ../uart.c:9:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../uart.c
+ 
+Building target: tx_Wifi.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,tx_Wifi.map -mmcu=atmega128 -o "tx_Wifi.elf"  ./lcd.o ./main.o ./rf.o ./uart.o   
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libc.a(pow.o): In function `pow':
+(.text.avr-libc.fplib+0x94): relocation truncated to fit: R_AVR_13_PCREL against symbol `__mulsf3' defined in .text section in c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_mul_sf.o)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libc.a(log.o): In function `log':
+(.text.avr-libc.fplib+0x46): relocation truncated to fit: R_AVR_13_PCREL against symbol `__addsf3' defined in .text section in c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_addsub_sf.o)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libc.a(log.o): In function `log':
+(.text.avr-libc.fplib+0x4e): relocation truncated to fit: R_AVR_13_PCREL against symbol `__addsf3' defined in .text section in c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_addsub_sf.o)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libc.a(log.o): In function `log':
+(.text.avr-libc.fplib+0x6a): relocation truncated to fit: R_AVR_13_PCREL against symbol `__floatsisf' defined in .text section in c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_si_to_sf.o)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libc.a(modf.o): In function `modff':
+(.text.avr-libc.fplib+0x3e): relocation truncated to fit: R_AVR_13_PCREL against symbol `__subsf3' defined in .text section in c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_addsub_sf.o)
+make: *** [tx_Wifi.elf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+
+15:49:10 Build Failed. 1 errors, 6 warnings. (took 3s.180ms)
+

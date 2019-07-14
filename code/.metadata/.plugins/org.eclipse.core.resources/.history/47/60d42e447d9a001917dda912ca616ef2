@@ -1,0 +1,55 @@
+/*
+ * main.c
+ *
+ *  Created on: Jun 21, 2019
+ *      Author: LENOVO
+ */
+
+
+#include "common_macros.h"
+#include "data_type.h"
+#include "micro_config.h"
+#include "rf.h"
+#include "lcd.h"
+
+int main ()
+{
+	DDRD|=0x80;
+    //DDRD &=~(1<<0);
+  //  PORTD=0;
+   DDRC &= ~(1 << PC0);
+	/*
+	 * Init.
+	 */
+	//RF_init();
+   // UART_init();
+	LCD_init();
+	/*
+	 * App.
+	 */
+
+	//uint8 data=0;
+
+	while( 1 )
+	{
+		//data=UART_recieveByte();
+
+      // PORTD=PINC;
+		 LCD_goToRowColumn(0,0);
+
+		LCD_integerToString( (PINC & 0x01) );
+
+
+		_delay_ms(5000);
+		LCD_clearScreen();
+
+		if((PINC & (1<<PC0))){
+			PORTD=(1<<7);
+		}
+		else if (!(PINC & (1<<PC0))){
+			PORTD=0;
+		}
+
+
+	}
+}

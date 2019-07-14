@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;VRTOGPS&apos; to &apos;AVRTOGPS&apos;" description="Rename resource &apos;VRTOGPS&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/VRTOGPS" name="AVRTOGPS" stamp="1560738883812" updateReferences="true"/>
+</session>

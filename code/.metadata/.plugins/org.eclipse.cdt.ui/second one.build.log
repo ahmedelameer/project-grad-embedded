@@ -1,0 +1,29 @@
+14:24:09 **** Incremental Build of configuration Debug for project second one ****
+make all 
+Building file: ../slave.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"slave.d" -MT"slave.o" -c -o "slave.o" "../slave.c"
+In file included from ../MICRO_setting.h:17,
+                 from ../uart.h:18,
+                 from ../slave.c:9:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../slave.c
+ 
+Building file: ../uart.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"uart.d" -MT"uart.o" -c -o "uart.o" "../uart.c"
+In file included from ../MICRO_setting.h:17,
+                 from ../uart.h:18,
+                 from ../uart.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../uart.c
+ 
+Building target: second one.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,second one.map -mmcu=atmega16 -o "second one.elf"  ./slave.o ./uart.o   
+avr-gcc.exe: one.map: No such file or directory
+make: *** [second one.elf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+
+14:24:09 Build Failed. 1 errors, 2 warnings. (took 390ms)
+

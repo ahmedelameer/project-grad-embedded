@@ -1,0 +1,38 @@
+14:48:54 **** Incremental Build of configuration Debug for project F ****
+make all 
+Building file: ../master.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"master.d" -MT"master.o" -c -o "master.o" "../master.c"
+In file included from ../MICRO_setting.h:17,
+                 from ../uart.h:18,
+                 from ../master.c:12:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../master.c
+ 
+Building target: F.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,F.map -mmcu=atmega16 -o "F.elf"  ./master.o ./uart.o   
+Finished building target: F.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S F.elf  >"F.lss"
+Finished building: F.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 F.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    3616 bytes (22.1% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+14:48:55 Build Finished. 0 errors, 1 warnings. (took 960ms)
+

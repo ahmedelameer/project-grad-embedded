@@ -1,0 +1,999 @@
+17:04:15 **** Clean-only build of configuration Debug for project reciever_Wifi ****
+make clean 
+rm -rf  reciever_Wifi.hex  ./lcd.o ./main.o ./rf.o ./uart.o  sizedummy  reciever_Wifi.lss  ./lcd.d ./main.d ./rf.d ./uart.d  reciever_Wifi.elf
+ 
+17:04:17 **** Build of configuration Debug for project reciever_Wifi ****
+make all 
+Building file: ../lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"lcd.d" -MT"lcd.o" -c -o "lcd.o" "../lcd.c"
+In file included from ../micro_config.h:9,
+                 from ../lcd.h:13,
+                 from ../lcd.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../lcd.c: In function 'LCD_integerToString':
+../lcd.c:185: warning: pointer targets in passing argument 2 of 'itoa' differ in signedness
+Finished building: ../lcd.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../micro_config.h:9,
+                 from ../main.c:11:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building file: ../rf.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"rf.d" -MT"rf.o" -c -o "rf.o" "../rf.c"
+In file included from ../MICRO_setting.h:17,
+                 from ../uart.h:18,
+                 from ../rf.h:11,
+                 from ../rf.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../rf.c:65: warning: 'wait' defined but not used
+Finished building: ../rf.c
+ 
+Building file: ../uart.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"uart.d" -MT"uart.o" -c -o "uart.o" "../uart.c"
+In file included from ../MICRO_setting.h:17,
+                 from ../uart.h:18,
+                 from ../uart.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../uart.c
+ 
+Building target: reciever_Wifi.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,reciever_Wifi.map -mmcu=atmega32 -o "reciever_Wifi.elf"  ./lcd.o ./main.o ./rf.o ./uart.o   
+Finished building target: reciever_Wifi.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S reciever_Wifi.elf  >"reciever_Wifi.lss"
+Finished building: reciever_Wifi.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex reciever_Wifi.elf  "reciever_Wifi.hex"
+Finished building: reciever_Wifi.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 reciever_Wifi.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5796 bytes (17.7% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:08:23 **** Incremental Build of configuration Debug for project reciever_Wifi ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../micro_config.h:9,
+                 from ../main.c:11:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building file: ../rf.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"rf.d" -MT"rf.o" -c -o "rf.o" "../rf.c"
+In file included from ../MICRO_setting.h:17,
+                 from ../uart.h:18,
+                 from ../rf.h:11,
+                 from ../rf.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../rf.c:65: warning: 'wait' defined but not used
+Finished building: ../rf.c
+ 
+Building file: ../uart.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"uart.d" -MT"uart.o" -c -o "uart.o" "../uart.c"
+In file included from ../MICRO_setting.h:17,
+                 from ../uart.h:18,
+                 from ../uart.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../uart.c
+ 
+Building target: reciever_Wifi.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,reciever_Wifi.map -mmcu=atmega32 -o "reciever_Wifi.elf"  ./lcd.o ./main.o ./rf.o ./uart.o   
+Finished building target: reciever_Wifi.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S reciever_Wifi.elf  >"reciever_Wifi.lss"
+Finished building: reciever_Wifi.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex reciever_Wifi.elf  "reciever_Wifi.hex"
+Finished building: reciever_Wifi.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 reciever_Wifi.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5796 bytes (17.7% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:12:27 **** Incremental Build of configuration Debug for project reciever_Wifi ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../micro_config.h:9,
+                 from ../main.c:11:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: reciever_Wifi.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,reciever_Wifi.map -mmcu=atmega32 -o "reciever_Wifi.elf"  ./lcd.o ./main.o ./rf.o ./uart.o   
+Finished building target: reciever_Wifi.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S reciever_Wifi.elf  >"reciever_Wifi.lss"
+Finished building: reciever_Wifi.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex reciever_Wifi.elf  "reciever_Wifi.hex"
+Finished building: reciever_Wifi.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 reciever_Wifi.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5550 bytes (16.9% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:16:18 **** Incremental Build of configuration Debug for project reciever_Wifi ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../micro_config.h:9,
+                 from ../main.c:11:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: reciever_Wifi.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,reciever_Wifi.map -mmcu=atmega32 -o "reciever_Wifi.elf"  ./lcd.o ./main.o ./rf.o ./uart.o   
+Finished building target: reciever_Wifi.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S reciever_Wifi.elf  >"reciever_Wifi.lss"
+Finished building: reciever_Wifi.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex reciever_Wifi.elf  "reciever_Wifi.hex"
+Finished building: reciever_Wifi.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 reciever_Wifi.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5546 bytes (16.9% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:17:20 **** Incremental Build of configuration Debug for project reciever_Wifi ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../micro_config.h:9,
+                 from ../main.c:11:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: reciever_Wifi.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,reciever_Wifi.map -mmcu=atmega32 -o "reciever_Wifi.elf"  ./lcd.o ./main.o ./rf.o ./uart.o   
+Finished building target: reciever_Wifi.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S reciever_Wifi.elf  >"reciever_Wifi.lss"
+Finished building: reciever_Wifi.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex reciever_Wifi.elf  "reciever_Wifi.hex"
+Finished building: reciever_Wifi.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 reciever_Wifi.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5796 bytes (17.7% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:20:22 **** Incremental Build of configuration Debug for project reciever_Wifi ****
+make all 
+Building file: ../uart.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"uart.d" -MT"uart.o" -c -o "uart.o" "../uart.c"
+In file included from ../MICRO_setting.h:17,
+                 from ../uart.h:18,
+                 from ../uart.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../uart.c
+ 
+Building target: reciever_Wifi.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,reciever_Wifi.map -mmcu=atmega32 -o "reciever_Wifi.elf"  ./lcd.o ./main.o ./rf.o ./uart.o   
+Finished building target: reciever_Wifi.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S reciever_Wifi.elf  >"reciever_Wifi.lss"
+Finished building: reciever_Wifi.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex reciever_Wifi.elf  "reciever_Wifi.hex"
+Finished building: reciever_Wifi.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 reciever_Wifi.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5804 bytes (17.7% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:45:43 **** Incremental Build of configuration Debug for project reciever_Wifi ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../micro_config.h:9,
+                 from ../main.c:11:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building file: ../rf.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"rf.d" -MT"rf.o" -c -o "rf.o" "../rf.c"
+In file included from ../MICRO_setting.h:17,
+                 from ../uart.h:18,
+                 from ../rf.h:11,
+                 from ../rf.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../rf.c:65: warning: 'wait' defined but not used
+Finished building: ../rf.c
+ 
+Building file: ../uart.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"uart.d" -MT"uart.o" -c -o "uart.o" "../uart.c"
+In file included from ../MICRO_setting.h:17,
+                 from ../uart.h:18,
+                 from ../uart.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../uart.c
+ 
+Building target: reciever_Wifi.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,reciever_Wifi.map -mmcu=atmega32 -o "reciever_Wifi.elf"  ./lcd.o ./main.o ./rf.o ./uart.o   
+Finished building target: reciever_Wifi.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S reciever_Wifi.elf  >"reciever_Wifi.lss"
+Finished building: reciever_Wifi.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex reciever_Wifi.elf  "reciever_Wifi.hex"
+Finished building: reciever_Wifi.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 reciever_Wifi.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5796 bytes (17.7% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:50:34 **** Incremental Build of configuration Debug for project reciever_Wifi ****
+make all 
+Building file: ../lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"lcd.d" -MT"lcd.o" -c -o "lcd.o" "../lcd.c"
+In file included from ../micro_config.h:9,
+                 from ../lcd.h:13,
+                 from ../lcd.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../lcd.c:182: error: conflicting types for 'LCD_integerToString'
+../lcd.h:78: error: previous declaration of 'LCD_integerToString' was here
+../lcd.c: In function 'LCD_integerToString':
+../lcd.c:185: warning: pointer targets in passing argument 2 of 'itoa' differ in signedness
+make: *** [lcd.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+17:51:18 **** Incremental Build of configuration Debug for project reciever_Wifi ****
+make all 
+Building file: ../lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"lcd.d" -MT"lcd.o" -c -o "lcd.o" "../lcd.c"
+In file included from ../micro_config.h:9,
+                 from ../lcd.h:13,
+                 from ../lcd.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../lcd.c: In function 'LCD_integerToString':
+../lcd.c:185: warning: pointer targets in passing argument 2 of 'itoa' differ in signedness
+Finished building: ../lcd.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../micro_config.h:9,
+                 from ../main.c:11:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: reciever_Wifi.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,reciever_Wifi.map -mmcu=atmega32 -o "reciever_Wifi.elf"  ./lcd.o ./main.o ./rf.o ./uart.o   
+Finished building target: reciever_Wifi.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S reciever_Wifi.elf  >"reciever_Wifi.lss"
+Finished building: reciever_Wifi.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex reciever_Wifi.elf  "reciever_Wifi.hex"
+Finished building: reciever_Wifi.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 reciever_Wifi.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5792 bytes (17.7% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:32:55 **** Incremental Build of configuration Debug for project reciever_Wifi ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../micro_config.h:9,
+                 from ../main.c:11:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: reciever_Wifi.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,reciever_Wifi.map -mmcu=atmega32 -o "reciever_Wifi.elf"  ./lcd.o ./main.o ./rf.o ./uart.o   
+Finished building target: reciever_Wifi.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S reciever_Wifi.elf  >"reciever_Wifi.lss"
+Finished building: reciever_Wifi.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex reciever_Wifi.elf  "reciever_Wifi.hex"
+Finished building: reciever_Wifi.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 reciever_Wifi.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5782 bytes (17.6% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:26:16 **** Incremental Build of configuration Debug for project reciever_Wifi ****
+make all 
+Building file: ../lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"lcd.d" -MT"lcd.o" -c -o "lcd.o" "../lcd.c"
+In file included from ../micro_config.h:9,
+                 from ../lcd.h:13,
+                 from ../lcd.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../lcd.c: In function 'LCD_integerToString':
+../lcd.c:185: warning: pointer targets in passing argument 2 of 'itoa' differ in signedness
+Finished building: ../lcd.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../micro_config.h:9,
+                 from ../main.c:11:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: reciever_Wifi.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,reciever_Wifi.map -mmcu=atmega32 -o "reciever_Wifi.elf"  ./lcd.o ./main.o ./rf.o ./uart.o   
+Finished building target: reciever_Wifi.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S reciever_Wifi.elf  >"reciever_Wifi.lss"
+Finished building: reciever_Wifi.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex reciever_Wifi.elf  "reciever_Wifi.hex"
+Finished building: reciever_Wifi.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 reciever_Wifi.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5800 bytes (17.7% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:42:39 **** Build of configuration Debug for project reciever_Wifi ****
+make all 
+Building file: ../lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"lcd.d" -MT"lcd.o" -c -o "lcd.o" "../lcd.c"
+In file included from ../micro_config.h:9,
+                 from ../lcd.h:13,
+                 from ../lcd.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../lcd.c: In function 'LCD_integerToString':
+../lcd.c:185: warning: passing argument 2 of 'itoa' from incompatible pointer type
+../lcd.c:186: warning: passing argument 1 of 'LCD_displayString' from incompatible pointer type
+Finished building: ../lcd.c
+ 
+Building target: reciever_Wifi.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,reciever_Wifi.map -mmcu=atmega32 -o "reciever_Wifi.elf"  ./lcd.o ./main.o ./rf.o ./uart.o   
+Finished building target: reciever_Wifi.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S reciever_Wifi.elf  >"reciever_Wifi.lss"
+Finished building: reciever_Wifi.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex reciever_Wifi.elf  "reciever_Wifi.hex"
+Finished building: reciever_Wifi.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 reciever_Wifi.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5800 bytes (17.7% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:38:22 **** Clean-only build of configuration Debug for project AVRTOGPS ****
+make clean 
+rm -rf  AVRTOGPS.hex  ./GPS.o ./LCD.o ./master.o ./uart.o  sizedummy  AVRTOGPS.lss  ./GPS.d ./LCD.d ./master.d ./uart.d  AVRTOGPS.elf
+ 
+11:38:25 **** Build of configuration Debug for project AVRTOGPS ****
+make all 
+Building file: ../GPS.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"GPS.d" -MT"GPS.o" -c -o "GPS.o" "../GPS.c"
+In file included from ../MICRO_setting.h:17,
+                 from ../uart.h:18,
+                 from ../GPS.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../GPS.c
+ 
+Building file: ../LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"LCD.d" -MT"LCD.o" -c -o "LCD.o" "../LCD.c"
+In file included from ../MICRO_setting.h:17,
+                 from ../LCD.h:51,
+                 from ../LCD.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../LCD.c: In function 'LCD_IntToStr':
+../LCD.c:242: warning: implicit declaration of function 'itoa'
+Finished building: ../LCD.c
+ 
+Building file: ../master.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"master.d" -MT"master.o" -c -o "master.o" "../master.c"
+In file included from ../MICRO_setting.h:17,
+                 from ../uart.h:18,
+                 from ../GPS.h:13,
+                 from ../master.c:12:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../master.c: In function 'main':
+../master.c:43: warning: pointer targets in passing argument 3 of 'LCD_displayStrRowCol' differ in signedness
+../master.c:47: warning: pointer targets in passing argument 3 of 'LCD_displayStrRowCol' differ in signedness
+../master.c:49: warning: pointer targets in passing argument 3 of 'LCD_displayStrRowCol' differ in signedness
+../master.c:51: warning: pointer targets in passing argument 3 of 'LCD_displayStrRowCol' differ in signedness
+Finished building: ../master.c
+ 
+Building file: ../uart.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"uart.d" -MT"uart.o" -c -o "uart.o" "../uart.c"
+In file included from ../MICRO_setting.h:17,
+                 from ../uart.h:18,
+                 from ../uart.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../uart.c
+ 
+Building target: AVRTOGPS.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AVRTOGPS.map -mmcu=atmega32 -o "AVRTOGPS.elf"  ./GPS.o ./LCD.o ./master.o ./uart.o   
+Finished building target: AVRTOGPS.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AVRTOGPS.elf  >"AVRTOGPS.lss"
+Finished building: AVRTOGPS.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AVRTOGPS.elf  "AVRTOGPS.hex"
+Finished building: AVRTOGPS.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AVRTOGPS.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9160 bytes (28.0% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:13:43 **** Build of configuration Debug for project reciever_Wifi ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../micro_config.h:9,
+                 from ../main.c:11:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:25: warning: passing argument 3 of 'LCD_displayStringRowCol' makes integer from pointer without a cast
+Finished building: ../main.c
+ 
+Building target: reciever_Wifi.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,reciever_Wifi.map -mmcu=atmega32 -o "reciever_Wifi.elf"  ./lcd.o ./main.o ./rf.o ./uart.o   
+Finished building target: reciever_Wifi.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S reciever_Wifi.elf  >"reciever_Wifi.lss"
+Finished building: reciever_Wifi.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex reciever_Wifi.elf  "reciever_Wifi.hex"
+Finished building: reciever_Wifi.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 reciever_Wifi.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5826 bytes (17.8% Full)
+(.text + .data + .bootloader)
+
+Data:        276 bytes (13.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:14:19 **** Incremental Build of configuration Debug for project reciever_Wifi ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../micro_config.h:9,
+                 from ../main.c:11:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:25: warning: passing argument 3 of 'LCD_displayStringRowCol' makes integer from pointer without a cast
+Finished building: ../main.c
+ 
+Building target: reciever_Wifi.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,reciever_Wifi.map -mmcu=atmega32 -o "reciever_Wifi.elf"  ./lcd.o ./main.o ./rf.o ./uart.o   
+Finished building target: reciever_Wifi.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S reciever_Wifi.elf  >"reciever_Wifi.lss"
+Finished building: reciever_Wifi.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex reciever_Wifi.elf  "reciever_Wifi.hex"
+Finished building: reciever_Wifi.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 reciever_Wifi.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5838 bytes (17.8% Full)
+(.text + .data + .bootloader)
+
+Data:        276 bytes (13.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:16:25 **** Incremental Build of configuration Debug for project reciever_Wifi ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../micro_config.h:9,
+                 from ../main.c:11:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: reciever_Wifi.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,reciever_Wifi.map -mmcu=atmega32 -o "reciever_Wifi.elf"  ./lcd.o ./main.o ./rf.o ./uart.o   
+Finished building target: reciever_Wifi.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S reciever_Wifi.elf  >"reciever_Wifi.lss"
+Finished building: reciever_Wifi.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex reciever_Wifi.elf  "reciever_Wifi.hex"
+Finished building: reciever_Wifi.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 reciever_Wifi.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5802 bytes (17.7% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:17:26 **** Clean-only build of configuration Debug for project reciever_Wifi ****
+make clean 
+rm -rf  reciever_Wifi.hex  ./lcd.o ./main.o ./rf.o ./uart.o  sizedummy  reciever_Wifi.lss  ./lcd.d ./main.d ./rf.d ./uart.d  reciever_Wifi.elf
+ 
+13:17:30 **** Build of configuration Debug for project reciever_Wifi ****
+make all 
+Building file: ../lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"lcd.d" -MT"lcd.o" -c -o "lcd.o" "../lcd.c"
+In file included from ../micro_config.h:9,
+                 from ../lcd.h:13,
+                 from ../lcd.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../lcd.c: In function 'LCD_integerToString':
+../lcd.c:185: warning: passing argument 2 of 'itoa' from incompatible pointer type
+../lcd.c:186: warning: passing argument 1 of 'LCD_displayString' from incompatible pointer type
+Finished building: ../lcd.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../micro_config.h:9,
+                 from ../main.c:11:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building file: ../rf.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"rf.d" -MT"rf.o" -c -o "rf.o" "../rf.c"
+In file included from ../MICRO_setting.h:17,
+                 from ../uart.h:18,
+                 from ../rf.h:11,
+                 from ../rf.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../rf.c:65: warning: 'wait' defined but not used
+Finished building: ../rf.c
+ 
+Building file: ../uart.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"uart.d" -MT"uart.o" -c -o "uart.o" "../uart.c"
+In file included from ../MICRO_setting.h:17,
+                 from ../uart.h:18,
+                 from ../uart.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../uart.c
+ 
+Building target: reciever_Wifi.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,reciever_Wifi.map -mmcu=atmega32 -o "reciever_Wifi.elf"  ./lcd.o ./main.o ./rf.o ./uart.o   
+Finished building target: reciever_Wifi.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S reciever_Wifi.elf  >"reciever_Wifi.lss"
+Finished building: reciever_Wifi.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex reciever_Wifi.elf  "reciever_Wifi.hex"
+Finished building: reciever_Wifi.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 reciever_Wifi.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5798 bytes (17.7% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:18:01 **** Clean-only build of configuration Debug for project reciever_Wifi ****
+make clean 
+rm -rf  reciever_Wifi.hex  ./lcd.o ./main.o ./rf.o ./uart.o  sizedummy  reciever_Wifi.lss  ./lcd.d ./main.d ./rf.d ./uart.d  reciever_Wifi.elf
+ 
+13:18:06 **** Build of configuration Debug for project reciever_Wifi ****
+make all 
+Building file: ../lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"lcd.d" -MT"lcd.o" -c -o "lcd.o" "../lcd.c"
+In file included from ../micro_config.h:9,
+                 from ../lcd.h:13,
+                 from ../lcd.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../lcd.c: In function 'LCD_integerToString':
+../lcd.c:185: warning: passing argument 2 of 'itoa' from incompatible pointer type
+../lcd.c:186: warning: passing argument 1 of 'LCD_displayString' from incompatible pointer type
+Finished building: ../lcd.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../micro_config.h:9,
+                 from ../main.c:11:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building file: ../rf.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"rf.d" -MT"rf.o" -c -o "rf.o" "../rf.c"
+In file included from ../MICRO_setting.h:17,
+                 from ../uart.h:18,
+                 from ../rf.h:11,
+                 from ../rf.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../rf.c:65: warning: 'wait' defined but not used
+Finished building: ../rf.c
+ 
+Building file: ../uart.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"uart.d" -MT"uart.o" -c -o "uart.o" "../uart.c"
+In file included from ../MICRO_setting.h:17,
+                 from ../uart.h:18,
+                 from ../uart.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../uart.c
+ 
+Building target: reciever_Wifi.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,reciever_Wifi.map -mmcu=atmega32 -o "reciever_Wifi.elf"  ./lcd.o ./main.o ./rf.o ./uart.o   
+Finished building target: reciever_Wifi.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S reciever_Wifi.elf  >"reciever_Wifi.lss"
+Finished building: reciever_Wifi.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex reciever_Wifi.elf  "reciever_Wifi.hex"
+Finished building: reciever_Wifi.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 reciever_Wifi.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6026 bytes (18.4% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:23:16 **** Clean-only build of configuration Debug for project reciever_Wifi ****
+make clean 
+rm -rf  reciever_Wifi.hex  ./lcd.o ./main.o ./rf.o ./uart.o  sizedummy  reciever_Wifi.lss  ./lcd.d ./main.d ./rf.d ./uart.d  reciever_Wifi.elf
+ 
+13:23:20 **** Build of configuration Debug for project reciever_Wifi ****
+make all 
+Building file: ../lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"lcd.d" -MT"lcd.o" -c -o "lcd.o" "../lcd.c"
+In file included from ../micro_config.h:9,
+                 from ../lcd.h:13,
+                 from ../lcd.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../lcd.c: In function 'LCD_integerToString':
+../lcd.c:185: warning: passing argument 2 of 'itoa' from incompatible pointer type
+../lcd.c:186: warning: passing argument 1 of 'LCD_displayString' from incompatible pointer type
+Finished building: ../lcd.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../micro_config.h:9,
+                 from ../main.c:11:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:28: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../main.c:37: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../main.c:44: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+Finished building: ../main.c
+ 
+Building file: ../rf.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"rf.d" -MT"rf.o" -c -o "rf.o" "../rf.c"
+In file included from ../MICRO_setting.h:17,
+                 from ../uart.h:18,
+                 from ../rf.h:11,
+                 from ../rf.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../rf.c:65: warning: 'wait' defined but not used
+Finished building: ../rf.c
+ 
+Building file: ../uart.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"uart.d" -MT"uart.o" -c -o "uart.o" "../uart.c"
+In file included from ../MICRO_setting.h:17,
+                 from ../uart.h:18,
+                 from ../uart.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../uart.c
+ 
+Building target: reciever_Wifi.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,reciever_Wifi.map -mmcu=atmega32 -o "reciever_Wifi.elf"  ./lcd.o ./main.o ./rf.o ./uart.o   
+Finished building target: reciever_Wifi.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S reciever_Wifi.elf  >"reciever_Wifi.lss"
+Finished building: reciever_Wifi.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex reciever_Wifi.elf  "reciever_Wifi.hex"
+Finished building: reciever_Wifi.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 reciever_Wifi.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6308 bytes (19.3% Full)
+(.text + .data + .bootloader)
+
+Data:        286 bytes (14.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:24:56 **** Incremental Build of configuration Debug for project reciever_Wifi ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../micro_config.h:9,
+                 from ../main.c:11:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:28: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../main.c:38: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../main.c:45: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+Finished building: ../main.c
+ 
+Building target: reciever_Wifi.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,reciever_Wifi.map -mmcu=atmega32 -o "reciever_Wifi.elf"  ./lcd.o ./main.o ./rf.o ./uart.o   
+Finished building target: reciever_Wifi.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S reciever_Wifi.elf  >"reciever_Wifi.lss"
+Finished building: reciever_Wifi.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex reciever_Wifi.elf  "reciever_Wifi.hex"
+Finished building: reciever_Wifi.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 reciever_Wifi.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6312 bytes (19.3% Full)
+(.text + .data + .bootloader)
+
+Data:        286 bytes (14.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

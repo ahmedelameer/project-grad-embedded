@@ -1,0 +1,42 @@
+04:14:50 **** Incremental Build of configuration Debug for project AVR_TO_TO ****
+make all 
+Building file: ../uart.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"uart.d" -MT"uart.o" -c -o "uart.o" "../uart.c"
+In file included from ../MICRO_setting.h:17,
+                 from ../uart.h:18,
+                 from ../uart.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../uart.c
+ 
+Building target: AVR_TO_TO.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AVR_TO_TO.map -mmcu=atmega32 -o "AVR_TO_TO.elf"  ./LCD.o ./master.o ./uart.o   
+Finished building target: AVR_TO_TO.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AVR_TO_TO.elf  >"AVR_TO_TO.lss"
+Finished building: AVR_TO_TO.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AVR_TO_TO.elf  "AVR_TO_TO.hex"
+Finished building: AVR_TO_TO.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AVR_TO_TO.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9014 bytes (27.5% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+04:14:51 Build Finished. 0 errors, 1 warnings. (took 360ms)
+

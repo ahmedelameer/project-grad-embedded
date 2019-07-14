@@ -1,0 +1,77 @@
+11:38:25 **** Build of configuration Debug for project AVRTOGPS ****
+make all 
+Building file: ../GPS.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"GPS.d" -MT"GPS.o" -c -o "GPS.o" "../GPS.c"
+In file included from ../MICRO_setting.h:17,
+                 from ../uart.h:18,
+                 from ../GPS.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../GPS.c
+ 
+Building file: ../LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"LCD.d" -MT"LCD.o" -c -o "LCD.o" "../LCD.c"
+In file included from ../MICRO_setting.h:17,
+                 from ../LCD.h:51,
+                 from ../LCD.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../LCD.c: In function 'LCD_IntToStr':
+../LCD.c:242: warning: implicit declaration of function 'itoa'
+Finished building: ../LCD.c
+ 
+Building file: ../master.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"master.d" -MT"master.o" -c -o "master.o" "../master.c"
+In file included from ../MICRO_setting.h:17,
+                 from ../uart.h:18,
+                 from ../GPS.h:13,
+                 from ../master.c:12:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../master.c: In function 'main':
+../master.c:43: warning: pointer targets in passing argument 3 of 'LCD_displayStrRowCol' differ in signedness
+../master.c:47: warning: pointer targets in passing argument 3 of 'LCD_displayStrRowCol' differ in signedness
+../master.c:49: warning: pointer targets in passing argument 3 of 'LCD_displayStrRowCol' differ in signedness
+../master.c:51: warning: pointer targets in passing argument 3 of 'LCD_displayStrRowCol' differ in signedness
+Finished building: ../master.c
+ 
+Building file: ../uart.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"uart.d" -MT"uart.o" -c -o "uart.o" "../uart.c"
+In file included from ../MICRO_setting.h:17,
+                 from ../uart.h:18,
+                 from ../uart.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../uart.c
+ 
+Building target: AVRTOGPS.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,AVRTOGPS.map -mmcu=atmega32 -o "AVRTOGPS.elf"  ./GPS.o ./LCD.o ./master.o ./uart.o   
+Finished building target: AVRTOGPS.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S AVRTOGPS.elf  >"AVRTOGPS.lss"
+Finished building: AVRTOGPS.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex AVRTOGPS.elf  "AVRTOGPS.hex"
+Finished building: AVRTOGPS.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 AVRTOGPS.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9160 bytes (28.0% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+11:38:31 Build Finished. 0 errors, 9 warnings. (took 6s.387ms)
+

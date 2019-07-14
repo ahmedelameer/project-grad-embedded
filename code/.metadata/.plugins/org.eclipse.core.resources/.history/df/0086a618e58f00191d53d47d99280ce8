@@ -1,0 +1,65 @@
+/*
+ * master.c
+ *
+ *  Created on: ??þ/??þ/????
+ *      Author: Mohamed ELameer
+ */
+
+
+
+
+
+#include"uart.h"
+#include"LCD.h"
+
+
+int main(void){
+	DDRD|=0x80;
+	 unit8 name[16];
+	 unit8 ch,i=0;
+	LCD_init();
+	//unit8 data[14] ={ 0xAA,0x44,0x00,0x02,0x00,0x04,0x00,0x00,0x00,0x02,0xCC,0x33,0xC3,0x3C},i;
+	UART_init();
+
+	/*LCD_gotoRawCol(0, 0);
+
+
+
+	 LCD_gotoRawCol(1, 0);*/
+	LCD_clearScreen();
+	LCD_gotoRawCol(0, 0);
+
+
+
+	//PORTD=(1<<7);
+
+
+
+
+	while(1){
+		ch=UART_recieveByte();
+		LCD_displayChar(ch);
+
+		 while(ch =='$'){*/
+
+		/*ch=UART_recieveByte();
+		if(ch=='$'){
+		LCD_displayChar(ch);
+		PORTD|=0x80;
+		}*/
+		//UART_sendByte(3);
+
+
+
+
+		//}
+
+		/*UART_receiveString(name);
+		LCD_displayString(name);*/
+
+
+
+
+	}
+	return 0;
+}
